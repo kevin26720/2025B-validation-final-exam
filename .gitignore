@@ -1,1 +1,12 @@
-target
+﻿# Database
+*.mv.db
+*.db
+testdb.mv.db
+
+# SonarQube data
+sonarqube-docker/sonarqube_data/
+sonarqube-docker/postgresql_data/
+sonarqube-docker/postgresql/data/
+
+# Maven
+.mvn/

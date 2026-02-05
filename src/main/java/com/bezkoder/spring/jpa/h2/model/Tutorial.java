@@ -1,5 +1,7 @@
 package com.bezkoder.spring.jpa.h2.model;
 
+import javax.annotation.Nullable;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -23,7 +25,7 @@ public class Tutorial {
 
   }
 
-  public Tutorial(String title, String description, boolean published) {
+  public Tutorial(@Nullable String title, @Nullable String description, boolean published) {
     this.title = title;
     this.description = description;
     this.published = published;
@@ -33,19 +35,21 @@ public class Tutorial {
     return id;
   }
 
+  @Nullable
   public String getTitle() {
     return title;
   }
 
-  public void setTitle(String title) {
+  public void setTitle(@Nullable String title) {
     this.title = title;
   }
 
+  @Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@Nullable String description) {
     this.description = description;
   }
 
